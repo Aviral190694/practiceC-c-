@@ -12,6 +12,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     // insert code here...
     cout << "Hello, World I am a Linked list!\n";
+    cout<<"Trying this new keyboard and it is going to take some time to get familiar to ";
     return 0;
 }
 
