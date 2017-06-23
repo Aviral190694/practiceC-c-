@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		1CE6F9EE1EFD5E2500E9D888 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6F9ED1EFD5E2500E9D888 /* main.cpp */; };
+		1CE6F9F91EFD73D300E9D888 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CE6F9F81EFD73D300E9D888 /* main.cpp */; };
 		E018AAE41EF3861C0004B61C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E018AAE31EF3861C0004B61C /* main.cpp */; };
 		E018AAF11EF386E80004B61C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E018AAF01EF386E80004B61C /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1CE6F9E91EFD5E2500E9D888 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1CE6F9F41EFD73D300E9D888 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -45,6 +55,8 @@
 /* Begin PBXFileReference section */
 		1CE6F9EB1EFD5E2500E9D888 /* AlgoCrush */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgoCrush; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CE6F9ED1EFD5E2500E9D888 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1CE6F9F61EFD73D300E9D888 /* BinaryQueries */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BinaryQueries; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CE6F9F81EFD73D300E9D888 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E018AAE01EF3861C0004B61C /* LearnC++ */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "LearnC++"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E018AAE31EF3861C0004B61C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E018AAEE1EF386E80004B61C /* Linked list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Linked list"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +65,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1CE6F9E81EFD5E2500E9D888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CE6F9F31EFD73D300E9D888 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -84,12 +103,21 @@
 			path = AlgoCrush;
 			sourceTree = "<group>";
 		};
+		1CE6F9F71EFD73D300E9D888 /* BinaryQueries */ = {
+			isa = PBXGroup;
+			children = (
+				1CE6F9F81EFD73D300E9D888 /* main.cpp */,
+			);
+			path = BinaryQueries;
+			sourceTree = "<group>";
+		};
 		E018AAD71EF3861B0004B61C = {
 			isa = PBXGroup;
 			children = (
 				E018AAE21EF3861C0004B61C /* LearnC++ */,
 				E018AAEF1EF386E80004B61C /* Linked list */,
 				1CE6F9EC1EFD5E2500E9D888 /* AlgoCrush */,
+				1CE6F9F71EFD73D300E9D888 /* BinaryQueries */,
 				E018AAE11EF3861C0004B61C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +128,7 @@
 				E018AAE01EF3861C0004B61C /* LearnC++ */,
 				E018AAEE1EF386E80004B61C /* Linked list */,
 				1CE6F9EB1EFD5E2500E9D888 /* AlgoCrush */,
+				1CE6F9F61EFD73D300E9D888 /* BinaryQueries */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +167,23 @@
 			name = AlgoCrush;
 			productName = AlgoCrush;
 			productReference = 1CE6F9EB1EFD5E2500E9D888 /* AlgoCrush */;
+			productType = "com.apple.product-type.tool";
+		};
+		1CE6F9F51EFD73D300E9D888 /* BinaryQueries */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CE6F9FA1EFD73D300E9D888 /* Build configuration list for PBXNativeTarget "BinaryQueries" */;
+			buildPhases = (
+				1CE6F9F21EFD73D300E9D888 /* Sources */,
+				1CE6F9F31EFD73D300E9D888 /* Frameworks */,
+				1CE6F9F41EFD73D300E9D888 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BinaryQueries;
+			productName = BinaryQueries;
+			productReference = 1CE6F9F61EFD73D300E9D888 /* BinaryQueries */;
 			productType = "com.apple.product-type.tool";
 		};
 		E018AADF1EF3861C0004B61C /* LearnC++ */ = {
@@ -187,6 +233,10 @@
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
+					1CE6F9F51EFD73D300E9D888 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
 					E018AADF1EF3861C0004B61C = {
 						CreatedOnToolsVersion = 9.0;
 					};
@@ -210,6 +260,7 @@
 				E018AADF1EF3861C0004B61C /* LearnC++ */,
 				E018AAED1EF386E80004B61C /* Linked list */,
 				1CE6F9EA1EFD5E2500E9D888 /* AlgoCrush */,
+				1CE6F9F51EFD73D300E9D888 /* BinaryQueries */,
 			);
 		};
 /* End PBXProject section */
@@ -220,6 +271,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CE6F9EE1EFD5E2500E9D888 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CE6F9F21EFD73D300E9D888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CE6F9F91EFD73D300E9D888 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +312,26 @@
 			name = Debug;
 		};
 		1CE6F9F01EFD5E2500E9D888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1CE6F9FB1EFD73D300E9D888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1CE6F9FC1EFD73D300E9D888 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -397,6 +476,14 @@
 			buildConfigurations = (
 				1CE6F9EF1EFD5E2500E9D888 /* Debug */,
 				1CE6F9F01EFD5E2500E9D888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1CE6F9FA1EFD73D300E9D888 /* Build configuration list for PBXNativeTarget "BinaryQueries" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CE6F9FB1EFD73D300E9D888 /* Debug */,
+				1CE6F9FC1EFD73D300E9D888 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>BinaryQueries.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>LearnC++.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1CE6F9EA1EFD5E2500E9D888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CE6F9F51EFD73D300E9D888</key>
 		<dict>
 			<key>primary</key>
 			<true/>
