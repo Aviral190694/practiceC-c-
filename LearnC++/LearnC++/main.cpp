@@ -11,6 +11,12 @@ using namespace std;
 #define LENGTH 10
 #define NEWLINE '\n'
 
+
+//Learning call by Value,Reference and Pointer
+void swapValue(int a,int b);
+void swap(int &a,int &b);
+void swapPointer(int *a, int *b);
+
 int main(int argc, const char * argv[]) {
     // insert code here...
 //    cout << "Hello, World!\n";
@@ -26,7 +32,46 @@ int main(int argc, const char * argv[]) {
     j=50000;
     i=j;
     cout<<i<<" "<<j;
-
+    int a = 100;
+    int b = 200;
     
+    //Learning call by Value,Reference and Pointer
+    cout<<endl<<"Initial Values are "<<a<<" "<<b;
+//    swapValue(a,b);
+    swapPointer(&a, &b);
+    cout<<endl<<"Swapped Values are "<<a<<" "<<b;
+    
+    //Learning String
+    char greeting[6] = {'H', 'e', 'l', 'l', 'o', '\0'};
+    
+    cout <<endl<< "Greeting message: ";
+    cout << greeting << endl;
+    
+    cout<<endl;
     return 0;
+}
+
+void swapPointer(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
+    return;
+}
+
+void swapValue(int a, int b)
+{
+    int temp = a;
+    a=b;
+    b=temp;
+    return;
+}
+
+void swap(int &a, int &b)
+{
+    int temp = a;
+    a=b;
+    b=temp;
+    return;
 }
