@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Aashna's Prog.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>AlgoCrush.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,6 +37,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1CE146DB1F04486E0032134E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1CE6F9EA1EFD5E2500E9D888</key>
 		<dict>
 			<key>primary</key>
