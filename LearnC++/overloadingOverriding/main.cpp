@@ -15,10 +15,16 @@ enum class test {
 
 class sum{
     int a;
+    int arr[10];
 public:
     sum()
     {
         a = 10;
+        int i;
+        for(i=0;i<10;i++)
+        {
+            arr[i] = i;
+        }
     }
     void display()
     {
@@ -53,6 +59,11 @@ public:
         newObj.a = this->a + a + b + c;
         return newObj;
         
+    }
+    
+    int &operator[](int i)
+    {
+        return arr[i];
     }
 };
 
@@ -98,5 +109,6 @@ int main(int argc, const char * argv[]) {
     cout<<fourth;
     fifth.display();
     cout<<fifth;
+    cout<<fifth[1];
     return 0;
 }
