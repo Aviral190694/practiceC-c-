@@ -1,6 +1,59 @@
 #include <iostream>
+#include <cstring>
 
 using namespace std;
+
+
+struct books
+{
+    char title[30];
+    char author[20];
+    int book_id;
+};
+
+void printbook(books *book);
+class secondClass;
+
+class firstClass
+{
+private:
+    int secret;
+public:
+    static int objects;
+    firstClass() : secret(1)
+    {
+        cout<<endl<<"Constructor for First class";
+        objects++;
+    }
+    
+    void printFunc()
+    {
+        cout<<endl<<"First class"<<secret;
+    }
+    static void getObjects()
+    {
+        cout<<endl<<"Number of Objects are " <<objects;
+    }
+    void setSecret(int len);
+    friend class secondClass;
+};
+
+int firstClass::objects = 0;
+
+void firstClass::setSecret(int len)
+{
+    secret = len;
+}
+class secondClass
+{
+public:
+    void display(firstClass &obj)
+    {
+        cout<<endl<<"Second class "<<obj.secret;
+        obj.secret = 10;
+    }
+};
+
 
 class two;
 
@@ -73,7 +126,6 @@ void display(test obj)
 {
     cout<<endl<<obj.width;
 }
-
 void getSeconds(unsigned long *par);
 double getAverage(int *arr,int size);
 int * getRandom( ) {
@@ -91,6 +143,25 @@ int * getRandom( ) {
 }
 
 int main () {
+    
+    books book1;
+    book1.book_id = 10;
+    strcpy(book1.title, "Logitech");
+//    cout<<"Book id is "<<book1.book_id<<" Title of the book is "<<book1.title;
+     printbook(&book1);
+    firstClass first;
+    first.printFunc();
+    secondClass seconds;
+    seconds.display(first);
+    first.printFunc();
+    seconds.display(first);
+    
+    firstClass *testPtr;
+    testPtr = &first;
+    testPtr->setSecret(25);
+    testPtr->printFunc();
+    first.printFunc();
+    firstClass::getObjects();
     
     test newTest;
     newTest.setWidth(5);
@@ -194,4 +265,8 @@ double getAverage(int *arr,int size)
         //or avg += arr[i];
     }
     return avg/size;
+}
+
+void printbook(books *book){
+    cout<<endl<<book->book_id;
 }
