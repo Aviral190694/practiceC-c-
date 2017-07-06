@@ -44,6 +44,11 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>filehandling.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
 		<key>overloadingOverriding.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -63,6 +68,11 @@
 			<true/>
 		</dict>
 		<key>1C27D36C1F0EC8F400E89F94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C27D3771F0EE81A00E89F94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
