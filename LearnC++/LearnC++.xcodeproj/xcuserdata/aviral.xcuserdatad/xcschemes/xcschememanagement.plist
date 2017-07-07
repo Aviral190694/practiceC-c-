@@ -44,6 +44,16 @@
 			<key>orderHint</key>
 			<integer>8</integer>
 		</dict>
+		<key>STLLibraries.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>Templates.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
 		<key>filehandling.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -73,6 +83,16 @@
 			<true/>
 		</dict>
 		<key>1C27D3771F0EE81A00E89F94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C27D38A1F0FD6DA00E89F94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C43D9321F102EA8006B033E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
