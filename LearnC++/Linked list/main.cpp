@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-void insert(int val);
+//void insert(int val);
 
 
 struct node

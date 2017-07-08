@@ -49,6 +49,16 @@
 			<key>orderHint</key>
 			<integer>11</integer>
 		</dict>
+		<key>Searching.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+		<key>Sorting.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 		<key>Templates.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -93,6 +103,16 @@
 			<true/>
 		</dict>
 		<key>1C43D9321F102EA8006B033E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C43D93D1F116364006B033E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C43D9481F1164D9006B033E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
