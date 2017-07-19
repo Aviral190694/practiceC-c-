@@ -12,6 +12,12 @@
 //Delete a key from a linkList
 //Delete a node by Position
 //Length of a linklist
+//print Nth Node
+//Print Nth Node from Back
+//Reverse the linklist.
+//Reverse K-Alt Nodes in a linklist.
+//Merge Sort
+//Reverse k-Alt Nodes
 #include <iostream>
 using namespace std;
 
@@ -42,7 +48,357 @@ public:
     int getLength();
     //int getLengthRec(node *tmp);
     void swap(int x,int y);
+    void printMiddle();
+    void printNthNode(int n);
+    void printNthNodeLast(int n);
+    void printNthNodeLastTwoPointers(int n);
+    void reverse();
+    void testReverse();
+    void kAltReverse(int k);
+    node* kAltReverseInt(node *tmp,int k);
+    node* kAltReverseIntFlipAll(node *tmp,int k);
+    void mergeSort();
+    void mergeS(node **ptr);
+    node* sortedMerge(node *left, node * right);
+    void partition(node *ptr,node **left, node **right);
 };
+
+void Linklist::mergeSort()
+{
+    if(head == NULL || head->next == NULL)
+    {
+        return;
+    }
+    mergeS(&head);
+}
+
+void Linklist::partition(node *ptr,node **left, node **right)
+{
+    
+    
+    
+    if(ptr ==NULL || ptr->next == NULL)
+    {
+        *left = ptr;
+        *right = NULL;
+        return;
+    }
+    
+    node *slow = ptr;
+    node *fast = ptr->next;
+    while(fast!= NULL && fast->next!=NULL)
+    {
+        slow= slow->next;
+        fast = fast->next->next;
+    }
+    
+    *left = ptr;
+    *right = slow->next;
+    slow->next = NULL;
+    
+}
+
+node * Linklist::sortedMerge(node *left, node *right)
+{
+    node *result=NULL;
+    node *tail;
+    
+    if(left ==NULL)
+    {
+        return right;
+    }
+    if(right ==NULL)
+    {
+        return left;
+    }
+    
+    while(left!=NULL && right!=NULL)
+    {
+        if(left->val<right->val)
+        {
+            if(result ==NULL)
+            {
+                result = left;
+                tail = left;
+            }
+            else
+            {
+                tail->next = left;
+                tail = tail->next;
+            }
+            left = left->next;
+        }
+        else{
+            if(result ==NULL)
+            {
+                result = right;
+                tail = right;
+            }
+            else
+            {
+                tail->next = right;
+                tail = tail->next;
+            }
+            right = right->next;
+        }
+    }
+    
+    while(left!=NULL)
+    {
+        tail->next = left;
+        tail = tail->next;
+        left = left->next;
+    }
+    
+    while(right!=NULL)
+    {
+        tail->next = right;
+        tail = tail->next;
+        right = right->next;
+    }
+    return result;
+}
+
+void Linklist::mergeS(node **ptr)
+{
+    
+    node *tmp = *ptr;
+    node *left = NULL;
+    node* right = NULL;
+    if(tmp == NULL || tmp->next ==NULL)
+    {
+        return;
+    }
+   
+    partition(tmp,&left, &right);
+    
+    mergeS(&left);
+    mergeS(&right);
+    
+    *ptr = sortedMerge(left, right);
+    
+    
+}
+
+node* Linklist::kAltReverseIntFlipAll(node *tmp, int k)
+{
+    node *current = tmp;
+    node *prev = NULL;
+    node* next;
+    
+    int count = 0;
+    while(current !=NULL && count<k)
+    {
+        count++;
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    
+    if(tmp!=NULL)
+    {
+        tmp->next = kAltReverseInt(current, k);;
+    }
+    
+    //    count = 0;
+    //    while(current!=NULL && count<k-1)
+    //    {
+    //        count++;
+    //        current = current->next;
+    //    }
+    
+    //    if(current!=NULL)
+    //    {
+    //        current->next = kAltReverseInt(current->next, k);
+    //    }
+    
+    return prev;
+}
+
+node* Linklist::kAltReverseInt(node *tmp, int k)
+{
+    node *current = tmp;
+    node *prev = NULL;
+    node* next;
+    
+    int count = 0;
+    while(current !=NULL && count<k)
+    {
+        count++;
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    
+    if(tmp!=NULL)
+    {
+        tmp->next = current;
+    }
+    
+    count = 0;
+    while(current!=NULL && count<k-1)
+    {
+        count++;
+        current = current->next;
+    }
+    
+    if(current!=NULL)
+    {
+        current->next = kAltReverseInt(current->next, k);
+    }
+    
+    return prev;
+}
+void Linklist::kAltReverse(int k)
+{
+    if(head == NULL)
+    {
+        cout<<"The List is empty";
+        return;
+    }
+    head = kAltReverseInt(head, k);
+}
+
+void Linklist::testReverse()
+{
+     node* prev   = NULL;
+     node* current = head;
+     node* next;
+    while (current != NULL)
+    {
+        next  = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    }
+    head = prev;
+}
+
+
+void Linklist::reverse()
+{
+    
+    if(head == NULL) {
+        cout<<"The list is empty";
+        return;
+    }
+    
+    if(head->next == NULL)
+        return;
+    
+    node *current = head->next;
+    node *prev = head;
+    node *next = NULL;
+    
+    while(current)
+    {
+        next = current->next;
+        current->next = prev;
+        if(prev == head)
+            prev->next = NULL;
+        prev = current;
+        current = next;
+    }
+    
+    head = prev;
+    
+}
+
+void Linklist::printNthNodeLastTwoPointers(int n)
+{
+    node *main = head;
+    node *ref = head;
+    
+    
+    if(head == NULL || n<0)
+    {
+        cout<<"List is Empty";
+        return;
+    }
+    
+    while(ref!=NULL && n>=0)
+    {
+        ref=ref->next;
+        n--;
+    }
+    
+    if(n==-1 && ref==NULL)
+    {
+        cout<<"Nth Element is "<<main->val<<endl;
+        return;
+    }
+    
+    if(ref==NULL)
+    {
+        cout<<"Out of list"<<endl;
+        return;
+    }
+    
+    while(ref!=NULL)
+    {
+        main=main->next;
+        ref=ref->next;
+    }
+    cout<<"Nth Element is "<<main->val<<endl;
+    
+}
+
+
+
+void Linklist::printNthNodeLast(int n){
+    
+    int length = getLength();
+    if(n>length)
+    {
+        cout<<"out of list";
+        return;
+    }
+    printNthNode(length-n-1);
+    
+}
+
+void Linklist::printNthNode(int n)
+{
+    if(head == NULL)
+    {
+        cout<<"List is Empty";
+        return;
+    }
+    node *tmp = head;
+    
+    while(tmp && n>0)
+    {
+        tmp=tmp->next;
+        n--;
+    }
+    
+    if(tmp == NULL)
+    {
+        cout<<"Out of list";
+        return;
+    }
+    cout<<"Nth Element is "<<tmp->val<<endl;
+    
+}
+
+void Linklist::printMiddle()
+{
+    if(head==NULL)
+    {
+        cout<<"List is Empty";
+        return;
+    }
+    node *ptr=head;
+    node *fastptr = head;
+    while(fastptr!=NULL && fastptr->next!=NULL)
+    {
+        ptr = ptr->next;
+        fastptr = fastptr->next->next;
+    }
+    cout<<"Middle is "<<ptr->val<<endl;
+}
 
 void Linklist::swap(int x, int y)
 {
@@ -277,23 +633,38 @@ int main(int argc, const char * argv[]) {
     list.insertNode(20);
     list.displayNode();
     list.insertNode(30);
-    list.insertNode(20);
+    list.insertNode(90);
     list.displayNode();
     list.insertNode(40);
-    list.insertNode(20);
+    list.insertNode(110);
     list.displayNode();
     list.insertNode(60);
+    list.insertNode(202);
+    
+    list.insertNode(50);
+    list.displayNode();
+    list.kAltReverse(2);
+    cout<<"KAltReverse";list.displayNode();
+    list.reverse();
+    list.displayNode();
+    list.reverse();
+    list.displayNode();
+    list.kAltReverse(2);
+    cout<<"KAltReverse";list.displayNode();
+    list.mergeSort();
+    cout<<"Merge Sort";list.displayNode();
+    list.printMiddle();
+    list.deleteKey(20);
+    list.deleteKey(20);
+    list.deleteKey(20);
+    list.deleteKey(20);
+    list.deleteKey(20);
     list.insertNode(20);
     list.displayNode();
-    list.deleteKey(20);
-    list.deleteKey(20);
-    list.deleteKey(20);
-    list.deleteKey(20);
-    list.deleteKey(20);
-    list.insertNode(20);
-    list.displayNode();
+    list.printMiddle();
     
     cout<<"Length is "<<list.getLength()<<endl;
+    
     list.deleteKeyByPos(4);
     
     list.deleteKeyByPos(4);
@@ -305,5 +676,16 @@ int main(int argc, const char * argv[]) {
     list.insertNode(20);
     list.swap(20,30);
     list.displayNode();
+    list.printMiddle();
+//    list.printNthNode(1);
+    list.printNthNodeLast(3);
+    list.printNthNodeLastTwoPointers(1);
+    list.reverse();
+    list.displayNode();
+    list.testReverse();
+    list.displayNode();
+    
+//    list.printNthNodeLastTwoPointers(5);
+    
     return 0;
 }
