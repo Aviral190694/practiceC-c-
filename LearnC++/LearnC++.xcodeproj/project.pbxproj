@@ -12,7 +12,7 @@
 		1C27D3701F0EC8F400E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D36F1F0EC8F400E89F94 /* main.cpp */; };
 		1C27D37B1F0EE81A00E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D37A1F0EE81A00E89F94 /* main.cpp */; };
 		1C27D38E1F0FD6DA00E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D38D1F0FD6DA00E89F94 /* main.cpp */; };
-		1C3F36581F235E19003AFD33 /* findPairInArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F36571F235E19003AFD33 /* findPairInArray.cpp */; };
+		1C3F366D1F23EF63003AFD33 /* calSortedArrayRotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F366C1F23EF63003AFD33 /* calSortedArrayRotation.cpp */; };
 		1C43D9361F102EA8006B033E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9351F102EA8006B033E /* main.cpp */; };
 		1C43D9571F118E4A006B033E /* exponential.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9561F118E4A006B033E /* exponential.cpp */; };
 		1C43D9661F16278D006B033E /* radix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9651F16278D006B033E /* radix.cpp */; };
@@ -200,6 +200,8 @@
 		1C3F36531F23232E003AFD33 /* revAlgoArrayRotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = revAlgoArrayRotation.cpp; sourceTree = "<group>"; };
 		1C3F36551F2328D8003AFD33 /* searchSortedRotated.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = searchSortedRotated.cpp; sourceTree = "<group>"; };
 		1C3F36571F235E19003AFD33 /* findPairInArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = findPairInArray.cpp; sourceTree = "<group>"; };
+		1C3F366A1F23E8B4003AFD33 /* maxSumWithRotations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = maxSumWithRotations.cpp; sourceTree = "<group>"; };
+		1C3F366C1F23EF63003AFD33 /* calSortedArrayRotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = calSortedArrayRotation.cpp; sourceTree = "<group>"; };
 		1C43D9331F102EA8006B033E /* STLLibraries */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = STLLibraries; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C43D9351F102EA8006B033E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C43D93E1F116364006B033E /* Sorting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Sorting; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -408,6 +410,8 @@
 				1C3F36551F2328D8003AFD33 /* searchSortedRotated.cpp */,
 				1C3F36531F23232E003AFD33 /* revAlgoArrayRotation.cpp */,
 				1C3F36571F235E19003AFD33 /* findPairInArray.cpp */,
+				1C3F366A1F23E8B4003AFD33 /* maxSumWithRotations.cpp */,
+				1C3F366C1F23EF63003AFD33 /* calSortedArrayRotation.cpp */,
 			);
 			path = ArrayPractice;
 			sourceTree = "<group>";
@@ -1000,7 +1004,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C3F36581F235E19003AFD33 /* findPairInArray.cpp in Sources */,
+				1C3F366D1F23EF63003AFD33 /* calSortedArrayRotation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1552,6 +1556,7 @@
 				1C3F364F1F2319E8003AFD33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1C43D9391F102EA8006B033E /* Build configuration list for PBXNativeTarget "STLLibraries" */ = {
 			isa = XCConfigurationList;

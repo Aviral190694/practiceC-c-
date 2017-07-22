@@ -53,7 +53,7 @@ void reverseArr(int arr[],int low, int high)
 
 int findAllPair(int arr[],int size,int x)
 {
-    static int total = 0;
+    int total = 0;
     int high = size-1;
     int low = 0;
     while(low<high)
