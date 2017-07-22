@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ArrayPractice.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
 		<key>BinaryQueries.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -108,6 +113,11 @@
 			<true/>
 		</dict>
 		<key>1C27D38A1F0FD6DA00E89F94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1C3F36491F2319E8003AFD33</key>
 		<dict>
 			<key>primary</key>
 			<true/>
