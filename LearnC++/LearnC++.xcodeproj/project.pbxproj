@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C2488D71F2B86850062C2F5 /* moveNegativeElementsInEnd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CD07B8F1F25EC9F00F11318 /* moveNegativeElementsInEnd.cpp */; };
 		1C27D35A1F0DB69000E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D3591F0DB69000E89F94 /* main.cpp */; };
 		1C27D3651F0E4AA300E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D3641F0E4AA300E89F94 /* main.cpp */; };
 		1C27D3701F0EC8F400E89F94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C27D36F1F0EC8F400E89F94 /* main.cpp */; };
@@ -15,7 +16,6 @@
 		1C43D9361F102EA8006B033E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9351F102EA8006B033E /* main.cpp */; };
 		1C43D9571F118E4A006B033E /* exponential.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9561F118E4A006B033E /* exponential.cpp */; };
 		1C43D9661F16278D006B033E /* radix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C43D9651F16278D006B033E /* radix.cpp */; };
-		1CD07B921F25F13800F11318 /* partition3PartsBasedOnRange.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CD07B911F25F13800F11318 /* partition3PartsBasedOnRange.cpp */; };
 		1CDB21071F1B3C59000F0B39 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB21061F1B3C59000F0B39 /* main.cpp */; };
 		1CDB214F1F1F00D7000F0B39 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB214E1F1F00D7000F0B39 /* main.cpp */; };
 		1CDB21531F20992D000F0B39 /* strings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1CE146E31F044AEB0032134E /* strings.cpp */; };
@@ -224,6 +224,8 @@
 		1CD07B8D1F24CDF500F11318 /* sortArrayDifference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sortArrayDifference.cpp; sourceTree = "<group>"; };
 		1CD07B8F1F25EC9F00F11318 /* moveNegativeElementsInEnd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = moveNegativeElementsInEnd.cpp; sourceTree = "<group>"; };
 		1CD07B911F25F13800F11318 /* partition3PartsBasedOnRange.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = partition3PartsBasedOnRange.cpp; sourceTree = "<group>"; };
+		1CD07B931F265A2900F11318 /* rearrangeMinMaxForm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rearrangeMinMaxForm.cpp; sourceTree = "<group>"; };
+		1CD07B971F273F9F00F11318 /* sortedSubsequenceSize3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = sortedSubsequenceSize3.cpp; path = ../sortedSubsequenceSize3.cpp; sourceTree = "<group>"; };
 		1CDB21041F1B3C59000F0B39 /* Trees */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Trees; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CDB21061F1B3C59000F0B39 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1CDB214C1F1F00D7000F0B39 /* MaxsubArray */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MaxsubArray; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,12 +392,13 @@
 			path = Polymorphism;
 			sourceTree = "<group>";
 		};
-		1C27D3791F0EE81A00E89F94 /* filehandling */ = {
+		1C27D3791F0EE81A00E89F94 /* FileHandling */ = {
 			isa = PBXGroup;
 			children = (
 				1C27D3841F0EF0AF00E89F94 /* afile.txt */,
 				1C27D37A1F0EE81A00E89F94 /* main.cpp */,
 			);
+			name = FileHandling;
 			path = filehandling;
 			sourceTree = "<group>";
 		};
@@ -471,8 +474,10 @@
 				1CD07B881F2482A500F11318 /* PositiveNegativeNum.cpp */,
 				1CD07B8F1F25EC9F00F11318 /* moveNegativeElementsInEnd.cpp */,
 				1CD07B911F25F13800F11318 /* partition3PartsBasedOnRange.cpp */,
+				1CD07B931F265A2900F11318 /* rearrangeMinMaxForm.cpp */,
 				1CD07B8D1F24CDF500F11318 /* sortArrayDifference.cpp */,
 				1CD07B8A1F24941F00F11318 /* sortWave.cpp */,
+				1CD07B971F273F9F00F11318 /* sortedSubsequenceSize3.cpp */,
 			);
 			name = "Array Arrangement Rearrangement";
 			sourceTree = "<group>";
@@ -528,7 +533,7 @@
 				1C27D3581F0DB69000E89F94 /* Inheritance */,
 				1C27D3631F0E4AA300E89F94 /* overloadingOverriding */,
 				1C27D36E1F0EC8F400E89F94 /* Polymorphism */,
-				1C27D3791F0EE81A00E89F94 /* filehandling */,
+				1C27D3791F0EE81A00E89F94 /* FileHandling */,
 				1C27D38C1F0FD6DA00E89F94 /* Templates */,
 				1C43D9341F102EA8006B033E /* STLLibraries */,
 				1C43D93F1F116364006B033E /* Sorting */,
@@ -1030,7 +1035,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CD07B921F25F13800F11318 /* partition3PartsBasedOnRange.cpp in Sources */,
+				1C2488D71F2B86850062C2F5 /* moveNegativeElementsInEnd.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
