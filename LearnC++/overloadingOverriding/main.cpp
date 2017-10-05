@@ -37,8 +37,7 @@ public:
         output << "F : " << D.a ;
         return output;
     }
-    friend istream &operator>>( istream &input,sum&D)
-    {
+    friend istream &operator>>( istream &input,sum&D) {
         input >> D.a;
         return input;
     }

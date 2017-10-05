@@ -35,31 +35,40 @@ T Max(T a, T b)
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    cout << "Value of __LINE__ : " << __LINE__ << endl;
-    cout << "Value of __FILE__ : " << __FILE__ << endl;
-    cout << "Value of __DATE__ : " << __DATE__ << endl;
-    cout << "Value of __TIME__ : " << __TIME__ << endl;
-    int i = 39;
-    int j = 29;
-    cout<<MAX(i, j);
-    cout<< typeid(j).name() <<endl;
-#ifdef LAUNC
-    cerr <<"Trace: Inside main function" << endl;
-#endif
-//    csout<< typeof(i) <<endl;
-    concat(c, out)<<MKSTR(Hey);
-    cout<<MKSTR(concat(this is, crazy));
-    cout << "Max(i, j): " << Max(i, j) << endl;
-    cout<<MKSTR(This is pretty cool )<<endl;
-    double f1 = 13.5;
-    double f2 = 20.7;
-    cout << "Max(f1, f2): " << Max(f1, f2) << endl;
-//    cout<<concat("Hey", "There");
-    char s1[] = "Hellos";
-    char s2[] = "Aorld";
-    cout << "Max(s1, s2): " << Max(s1, s2) << endl;
-#ifdef LAUNC
-    cerr <<"Trace: Inside main function" << endl;
-#endif
-    return 0;
+  int i=0;
+  printf("%d",++i );
+  printf("%d",i++ );
+  printf("%d",++i );
+  printf("\n");
+  i=0;
+  printf("%d",++i + i++ + ++i);
+  printf("\n");
+  
+//    cout << "Value of __LINE__ : " << __LINE__ << endl;
+//    cout << "Value of __FILE__ : " << __FILE__ << endl;
+//    cout << "Value of __DATE__ : " << __DATE__ << endl;
+//    cout << "Value of __TIME__ : " << __TIME__ << endl;
+//    int i = 39;
+//    int j = 29;
+//    cout<<MAX(i, j);
+//    cout<< typeid(j).name() <<endl;
+//#ifdef LAUNC
+//    cerr <<"Trace: Inside main function" << endl;
+//#endif
+////    csout<< typeof(i) <<endl;
+//    concat(c, out)<<MKSTR(Hey);
+//    cout<<MKSTR(concat(this is, crazy));
+//    cout << "Max(i, j): " << Max(i, j) << endl;
+//    cout<<MKSTR(This is pretty cool )<<endl;
+//    double f1 = 13.5;
+//    double f2 = 20.7;
+//    cout << "Max(f1, f2): " << Max(f1, f2) << endl;
+////    cout<<concat("Hey", "There");
+//    char s1[] = "Hellos";
+//    char s2[] = "Aorld";
+//    cout << "Max(s1, s2): " << Max(s1, s2) << endl;
+//#ifdef LAUNC
+//    cerr <<"Trace: Inside main function" << endl;
+//#endif
+//    return 0;
 }

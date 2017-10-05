@@ -23,6 +23,7 @@ int main(int argc, const char * argv[]) {
 //    cin>>str3;
     
     cout<<"\n"<<str3<<endl;
+    cout<<"Practise";
     int a;
     cin>>a;
     cout<<"Enter String 3";
