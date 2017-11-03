@@ -9,7 +9,8 @@
 #include <iostream>
 using namespace std;
 
-void printArr(int arr[],int n)
+//PrintArray Function
+void printArray(int arr[],int n)
 {
     for (int i=0; i<n; i++) {
         cout<<arr[i]<<" ";
@@ -45,7 +46,7 @@ void arrayRotation(int arr[],int d, int n)
     reverseArr(arr,0,d);
     reverseArr(arr, d, n);
     reverseArr(arr, 0, n);
-    printArr(arr, n);
+    printArray(arr, n);
 }
 int main(int argc, const char * argv[]) {
     // insert code here...
