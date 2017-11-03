@@ -65,23 +65,25 @@ int findPivot(int arr[],int l,int h){
 int pivotedBinarySearch(int arr[], int n, int key)
 {
     int pivot = findPivot(arr, 0, n-1);
-    cout<<"Pivot is "<<pivot<<endl;
+    cout << "Pivot is " << pivot << endl;
     // If we didn't find a pivot, then array is not rotated at all
     if (pivot == -1)
-    return binarySearch(arr, 0, n-1, key);
+      return binarySearch(arr, 0, n-1, key);
     
     // If we found a pivot, then first compare with pivot and then
     // search in two subarrays around pivot
     if (arr[pivot] == key)
-    return pivot;
+      return pivot;
+  
     if (arr[0] <= key)
-    return binarySearch(arr, 0, pivot-1, key);
+      return binarySearch(arr, 0, pivot-1, key);
+  
     return binarySearch(arr, pivot+1, n-1, key);
 }
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
-    int arr[] = {3,4,5,6,7,1,2};
+    int arr[] = {3, 4, 5, 6, 7, 1, 2};
     int size = sizeof(arr)/sizeof(arr[0]);
     int key = 1;
     cout<<pivotedBinarySearch(arr,size, key);
