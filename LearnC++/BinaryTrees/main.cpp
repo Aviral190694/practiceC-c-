@@ -9,12 +9,18 @@
 #include <iostream>
 using namespace std;
 
+
+
 struct tree{
   int val;
   tree *left;
   tree *right;
 };
 
+struct queue {
+  tree *tNode;
+  queue *next;
+};
 
 int isSumProperty(struct tree* node)
 {
@@ -200,16 +206,151 @@ tree* addNode(int val)
   
 }
 
+int getTreeHeight(tree *node) {
+  
+  if (node == NULL) {
+    return 0;
+  }
+  
+  int lHeight = getTreeHeight(node->left);
+  int rHeight = getTreeHeight(node->right);
+  
+  if (lHeight > rHeight)
+    return lHeight + 1;
+  else
+    return rHeight + 1;
+  
+}
+
+void printGivenLevel(tree *node, int level) {
+  if (node == NULL)
+    return;
+  
+  if (level == 1)
+    cout << node->val << " ";
+  else if (level > 1) {
+    printGivenLevel(node->left, level -1);
+    printGivenLevel(node->right, level - 1);
+  }
+  
+}
+
+
+
+void printLevelOrder(tree *node) {
+  if (node == NULL)
+    return;
+  
+  int height = getTreeHeight(node);
+  
+  for (int i=0; i<height; i++) {
+    printGivenLevel(node, i+1);
+  }
+  
+}
+
+int queueHeight(queue *front) {
+  
+  int height = 0;
+  cout << endl;
+  
+  while (front != NULL) {
+    height++;
+    front = front->next;
+  }
+  
+  return height;
+}
+
+queue* addNode(tree *node) {
+  
+  queue *qNode = new queue();
+  qNode->tNode = node;
+  qNode->next = NULL;
+  return qNode;
+}
+
+queue* pushToQueue(queue *front, tree *node) {
+  if (front == NULL) {
+    front = addNode(node);
+    return front;
+  }
+  queue *tmp = front;
+  while (front->next != NULL)
+    front = front->next;
+  
+  front->next = addNode(node);
+  return tmp;
+}
+
+queue* removeFront(queue *front) {
+  if (front == NULL) {
+    return NULL;
+  }
+  
+  if (front->next == NULL) {
+    delete(front);
+    return NULL;
+  }
+  
+  queue *tmp = front;
+  front = front->next;
+  delete(tmp);
+  return front;
+  
+}
+
+void printLevelOrderQueue(tree *node) {
+  if (node == NULL)
+    return;
+  
+  queue *front;
+  front = addNode(node);
+  
+  while (1) {
+    
+    int nodeCount = queueHeight(front);
+    
+    if (nodeCount == 0) {
+      break;
+    }
+    
+    while (nodeCount > 0) {
+      tree *treeNode = front->tNode;
+      cout << treeNode->val << " ";
+      front = removeFront(front);
+      
+      if (treeNode->left != NULL) {
+        front = pushToQueue(front, treeNode->left);
+      }
+      
+      if (treeNode->right != NULL) {
+        front = pushToQueue(front, treeNode->right);
+      }
+      nodeCount--;
+    }
+    cout << endl;
+  }
+  
+  
+}
+
 int main(int argc, const char * argv[]) {
   // insert code here...
   cout << "Hello, World!\n";
-  tree *root= addNode(70);
-  root->left = addNode(40);
+  tree *root= addNode(10);
+  root->left = addNode(20);
   root->right = addNode(30);
-  root->left->left = addNode(30);
-  root->left->right = addNode(10);
-  root->right->left = addNode(10);
-  root->right->right = addNode(20);
+  root->left->left = addNode(40);
+  root->left->right = addNode(50);
+  root->right->left = addNode(60);
+  root->right->right = addNode(70);
+  cout << "Height of the tree is " << getTreeHeight(root) << endl;
+  printLevelOrderQueue(root);
+  cout << endl;
+  cout << "Level order is " << "\n";
+  printLevelOrder(root);
+  cout << endl;
   printTreeInOrder(root);
   cout<<endl;
   printTreePreOrder(root);
@@ -227,3 +368,4 @@ int main(int argc, const char * argv[]) {
   cout<<" "<<isSumProperty(root)<<" ";
   return 0;
 }
+
