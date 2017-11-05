@@ -9,8 +9,6 @@
 #include <iostream>
 using namespace std;
 
-
-
 struct tree{
   int val;
   tree *left;
@@ -113,19 +111,17 @@ void printSpiral(tree* root)
 }
 
 
-int calLeaf(tree *node)
-{
-  if(node ==NULL)
+int calLeaf(tree *node) {
+  if (node ==  NULL)
     return 0;
-  if(node->left == NULL && node->right ==NULL)
+  if (node->left == NULL && node->right == NULL)
     return 1;
   else
     return calLeaf(node->left) + calLeaf(node->right);
 }
 
-void mirror(tree *node)
-{
-  if(node == NULL)
+void mirror(tree *node) {
+  if (node == NULL)
     return;
   
   mirror(node->left);
@@ -137,73 +133,71 @@ void mirror(tree *node)
   node->right = temp;
 }
 
-int size(tree *node)
-{
-  if(node==NULL)
+int size(tree *node) {
+  if (node==NULL)
     return 0;
   else
     return size(node->left) + size(node->right) + 1;
 }
 
-
-
-void bfsLevel(tree *node,int level)
-{
-  if(node == NULL)
+void bfsLevel(tree *node,int level) {
+  
+  if (node == NULL)
     return;
-  if(level ==1)
-  {
-    cout<<node->val<<" ";
+  
+  if (level == 1) {
+    cout << node->val << " ";
   }
-  else{
+  else {
     bfsLevel(node->left, level-1);
     bfsLevel(node->right, level-1);
   }
   
 }
 
-void bfs(tree *node)
-{
+void bfs(tree *node) {
   int treeHeight = height(node);
-  for(int i=1;i<=treeHeight;i++)
-  {
+  
+  for(int i=1; i<=treeHeight; i++) {
     bfsLevel(node,i);
     cout<<endl;
   }
 }
 
-void printTreeInOrder(tree *node){
-  if(node == NULL)
+void printTreeInOrder(tree *node) {
+  if (node == NULL)
     return;
+  
   printTreeInOrder(node->left);
-  cout<<" "<<node->val;
+  cout << " " << node->val;
   printTreeInOrder(node->right);
 }
 
-void printTreePostOrder(tree *node){
-  if(node == NULL)
+void printTreePostOrder(tree *node) {
+  if (node == NULL)
     return;
+ 
   printTreeInOrder(node->left);
   printTreeInOrder(node->right);
-  cout<<" "<<node->val;
+  cout << " " << node->val;
 }
-void printTreePreOrder(tree *node){
-  if(node == NULL)
+
+void printTreePreOrder(tree *node) {
+  if (node == NULL)
     return;
-  cout<<" "<<node->val;
-  printTreeInOrder(node->left);
   
+  cout << " " << node->val;
+  printTreeInOrder(node->left);
   printTreeInOrder(node->right);
 }
-tree* addNode(int val)
-{
+
+tree* addNode(int val) {
   tree *node = new tree();
   
   node->val = val;
   node->left = NULL;
   node->right = NULL;
   return node;
-  
 }
 
 int getTreeHeight(tree *node) {
@@ -226,8 +220,9 @@ void printGivenLevel(tree *node, int level) {
   if (node == NULL)
     return;
   
-  if (level == 1)
+  if (level == 1) {
     cout << node->val << " ";
+  }
   else if (level > 1) {
     printGivenLevel(node->left, level -1);
     printGivenLevel(node->right, level - 1);
@@ -238,6 +233,7 @@ void printGivenLevel(tree *node, int level) {
 
 
 void printLevelOrder(tree *node) {
+  
   if (node == NULL)
     return;
   
@@ -252,8 +248,6 @@ void printLevelOrder(tree *node) {
 int queueHeight(queue *front) {
   
   int height = 0;
-  cout << endl;
-  
   while (front != NULL) {
     height++;
     front = front->next;
