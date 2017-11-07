@@ -9,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-struct tree{
+struct tree {
   int val;
   tree *left;
   tree *right;

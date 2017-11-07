@@ -72,13 +72,9 @@ void Linklist::mergeSort()
     mergeS(&head);
 }
 
-void Linklist::partition(node *ptr,node **left, node **right)
-{
-    
-    
-    
-    if(ptr ==NULL || ptr->next == NULL)
-    {
+void Linklist::partition(node *ptr,node **left, node **right) {
+  
+    if (ptr == NULL || ptr->next == NULL) {
         *left = ptr;
         *right = NULL;
         return;
@@ -86,8 +82,8 @@ void Linklist::partition(node *ptr,node **left, node **right)
     
     node *slow = ptr;
     node *fast = ptr->next;
-    while(fast!= NULL && fast->next!=NULL)
-    {
+  
+    while (fast != NULL && fast->next != NULL) {
         slow= slow->next;
         fast = fast->next->next;
     }
@@ -292,14 +288,14 @@ void Linklist::reverse()
     node *prev = head;
     node *next = NULL;
     
-    while(current)
-    {
-        next = current->next;
-        current->next = prev;
-        if(prev == head)
+    while (current) {
+      next = current->next;
+      current->next = prev;
+      
+      if(prev == head)
             prev->next = NULL;
-        prev = current;
-        current = next;
+      prev = current;
+      current = next;
     }
     
     head = prev;
